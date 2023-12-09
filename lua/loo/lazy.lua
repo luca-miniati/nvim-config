@@ -15,14 +15,39 @@ local plugins = {
 	"nvim-telescope/telescope.nvim",
 	"nvim-lua/plenary.nvim",
 	"nvim-treesitter/nvim-treesitter",
+
+    -- lsp stuff
 	'williamboman/mason.nvim',
 	'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'saadparwaiz1/cmp_luasnip',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-nvim-lua',
+    'L3MON4D3/LuaSnip',
+    'rafamadriz/friendly-snippets',
 	{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
-	"neovim/nvim-lspconfig",
-	"hrsh7th/cmp-nvim-lsp",
-	"hrsh7th/nvim-cmp",
-	"L3MON4D3/LuaSnip",
-    "ThePrimeagen/harpoon"
+
+    -- flutter
+    {
+        'akinsho/flutter-tools.nvim',
+        lazy = false,
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim',
+        },
+        config = true,
+    },
+
+    "ThePrimeagen/harpoon",
+    "numToStr/Comment.nvim",
+
+    -- colors
+    { "rose-pine/neovim", name = "rose-pine" },
+    { "navarasu/onedark.nvim", name = "onedark" },
+    { "bluz71/vim-moonfly-colors", name = "moonfly" },
 }
 
 require("lazy").setup(plugins)
