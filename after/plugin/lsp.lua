@@ -1,9 +1,11 @@
+require("mason").setup()
+require("mason-lspconfig").setup()
+
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
 cmp.setup({
@@ -15,7 +17,7 @@ cmp.setup({
         ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
         ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
         ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-        ["<C-Space>"] = cmp.mapping.complete(),
+        ["<C-Enter>"] = cmp.mapping.complete(),
     })
 })
 
@@ -34,9 +36,11 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
--- require('lspconfig').pyright.setup({cmd = { "pyright-langserver", "--stdio", "--venvpath=/home/lucaminiati/.conda/envs" }})
-require('lspconfig').dartls.setup{cmd = {"/home/lucaminiati/dev/flutter/bin/dart", "language-server", "--protocol-traffic-log=log.txt"}}
+require('lspconfig').pylsp.setup({})
+-- require('lspconfig').dartls.setup{cmd = {"/home/lucaminiati/dev/flutter/bin/dart", "language-server"}}
 require('lspconfig').lua_ls.setup({})
+require('lspconfig').tsserver.setup({})
+require('lspconfig').jdtls.setup({})
+require('lspconfig').rust_analyzer.setup({})
 
 lsp.setup()
-

@@ -42,12 +42,14 @@ local plugins = {
     },
 
     "ThePrimeagen/harpoon",
+    "ThePrimeagen/vim-be-good",
     "numToStr/Comment.nvim",
 
     -- colors
     { "rose-pine/neovim", name = "rose-pine" },
     { "navarasu/onedark.nvim", name = "onedark" },
     { "bluz71/vim-moonfly-colors", name = "moonfly" },
+    { "miikanissi/modus-themes.nvim", name = "modus" },
 }
 
 require("lazy").setup(plugins)
