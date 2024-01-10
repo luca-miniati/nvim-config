@@ -15,6 +15,9 @@ local plugins = {
 	"nvim-telescope/telescope.nvim",
 	"nvim-lua/plenary.nvim",
 	"nvim-treesitter/nvim-treesitter",
+    
+    --LaTeX
+    "lervag/vimtex",
 
     -- lsp stuff
 	'williamboman/mason.nvim',
