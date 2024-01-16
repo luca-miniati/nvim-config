@@ -15,6 +15,7 @@ local plugins = {
 	"nvim-telescope/telescope.nvim",
 	"nvim-lua/plenary.nvim",
 	"nvim-treesitter/nvim-treesitter",
+    "xiyaowong/virtcolumn.nvim",
     
     --LaTeX
     "lervag/vimtex",
@@ -34,15 +35,15 @@ local plugins = {
 	{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
 
     -- flutter
-    {
-        'akinsho/flutter-tools.nvim',
-        lazy = false,
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            'stevearc/dressing.nvim',
-        },
-        config = true,
-    },
+    -- {
+    --     'akinsho/flutter-tools.nvim',
+    --     lazy = false,
+    --     dependencies = {
+    --         'nvim-lua/plenary.nvim',
+    --         'stevearc/dressing.nvim',
+    --     },
+    --     config = true,
+    -- },
 
     "ThePrimeagen/harpoon",
     "ThePrimeagen/vim-be-good",

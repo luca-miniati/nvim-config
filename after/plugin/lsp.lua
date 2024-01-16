@@ -39,8 +39,9 @@ end)
 require('lspconfig').pylsp.setup({})
 -- require('lspconfig').dartls.setup{cmd = {"/home/lucaminiati/dev/flutter/bin/dart", "language-server"}}
 require('lspconfig').lua_ls.setup({})
-require('lspconfig').tsserver.setup({})
+-- require('lspconfig').tsserver.setup({})
 require('lspconfig').jdtls.setup({})
+require('lspconfig').denols.setup({})
 require('lspconfig').rust_analyzer.setup({})
 
 lsp.setup()
