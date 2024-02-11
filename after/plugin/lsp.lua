@@ -43,5 +43,6 @@ require('lspconfig').lua_ls.setup({})
 require('lspconfig').jdtls.setup({})
 require('lspconfig').denols.setup({})
 require('lspconfig').rust_analyzer.setup({})
+require('lspconfig').ccls.setup({})
 
 lsp.setup()

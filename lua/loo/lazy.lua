@@ -16,31 +16,39 @@ local plugins = {
 	"nvim-lua/plenary.nvim",
 	"nvim-treesitter/nvim-treesitter",
     "xiyaowong/virtcolumn.nvim",
-    
+
     --LaTeX
     "lervag/vimtex",
 
     -- lsp stuff
-	'williamboman/mason.nvim',
-	'williamboman/mason-lspconfig.nvim',
-    'neovim/nvim-lspconfig',
-    'hrsh7th/nvim-cmp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
-    'saadparwaiz1/cmp_luasnip',
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-nvim-lua',
-    'L3MON4D3/LuaSnip',
-    'rafamadriz/friendly-snippets',
+	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+    "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+    "saadparwaiz1/cmp_luasnip",
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-nvim-lua",
+    "L3MON4D3/LuaSnip",
+    "rafamadriz/friendly-snippets",
 	{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
+
+    {
+        "vidocqh/data-viewer.nvim",
+        opts = {},
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        }
+    },
 
     -- flutter
     -- {
-    --     'akinsho/flutter-tools.nvim',
+    --     "akinsho/flutter-tools.nvim",
     --     lazy = false,
     --     dependencies = {
-    --         'nvim-lua/plenary.nvim',
-    --         'stevearc/dressing.nvim',
+    --         "nvim-lua/plenary.nvim",
+    --         "stevearc/dressing.nvim",
     --     },
     --     config = true,
     -- },
@@ -48,6 +56,9 @@ local plugins = {
     "ThePrimeagen/harpoon",
     "ThePrimeagen/vim-be-good",
     "numToStr/Comment.nvim",
+
+    -- docs
+    "luckasRanarison/nvim-devdocs",
 
     -- colors
     { "rose-pine/neovim", name = "rose-pine" },
