@@ -63,8 +63,7 @@ local plugins = {
     -- colors
     { "rose-pine/neovim", name = "rose-pine" },
     { "navarasu/onedark.nvim", name = "onedark" },
-    { "bluz71/vim-moonfly-colors", name = "moonfly" },
-    { "miikanissi/modus-themes.nvim", name = "modus" },
+    { "cseelus/vim-colors-lucid", name = "lucid" },
 }
 
 require("lazy").setup(plugins)

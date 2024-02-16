@@ -1,10 +1,10 @@
 require("nvim-devdocs").setup({
     float_win = { -- passed to nvim_open_win(), see :h api-floatwin
         relative = "editor",
-        row = 0,
-        col = 0,
-        height = 25,
-        width = 125,
+        row = 2,
+        col = 17,
+        height = 35,
+        width = 140,
         border = "rounded",
     },
     previewer_cmd = "glow",
