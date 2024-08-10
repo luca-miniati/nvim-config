@@ -21,7 +21,7 @@ cmp.setup({
     })
 })
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -36,13 +36,26 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-require('lspconfig').pylsp.setup({})
+require('lspconfig').anakin_language_server.setup({})
 -- require('lspconfig').dartls.setup{cmd = {"/home/lucaminiati/dev/flutter/bin/dart", "language-server"}}
-require('lspconfig').lua_ls.setup({})
--- require('lspconfig').tsserver.setup({})
-require('lspconfig').jdtls.setup({})
-require('lspconfig').denols.setup({})
-require('lspconfig').rust_analyzer.setup({})
+require('lspconfig').lua_ls.setup({
+settings = {
+    Lua = {
+      diagnostics = {
+        globals = {
+          'vim',
+          'require'
+        },
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+    },
+  },
+})
+require('lspconfig').tsserver.setup({})
+-- require('lspconfig').denols.setup({})
 require('lspconfig').ccls.setup({})
 
 lsp.setup()

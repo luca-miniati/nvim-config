@@ -1,6 +1,6 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
- nvim.fn.system({
+ vim.fn.system({
     "git",
     "clone",
     "--filter=blob:none",
@@ -15,7 +15,8 @@ local plugins = {
 	"nvim-telescope/telescope.nvim",
 	"nvim-lua/plenary.nvim",
 	"nvim-treesitter/nvim-treesitter",
-    "xiyaowong/virtcolumn.nvim",
+    "MunifTanjim/nui.nvim",
+    "VonHeikemen/fine-cmdline.nvim",
 
     --LaTeX
     "lervag/vimtex",
@@ -42,28 +43,13 @@ local plugins = {
         }
     },
 
-    -- flutter
-    -- {
-    --     "akinsho/flutter-tools.nvim",
-    --     lazy = false,
-    --     dependencies = {
-    --         "nvim-lua/plenary.nvim",
-    --         "stevearc/dressing.nvim",
-    --     },
-    --     config = true,
-    -- },
-
     "ThePrimeagen/harpoon",
     "ThePrimeagen/vim-be-good",
     "numToStr/Comment.nvim",
 
-    -- docs
-    "luckasRanarison/nvim-devdocs",
-
     -- colors
+    { "aktersnurra/no-clown-fiesta.nvim", name = "no-clown-fiesta" },
     { "rose-pine/neovim", name = "rose-pine" },
-    { "navarasu/onedark.nvim", name = "onedark" },
-    { "cseelus/vim-colors-lucid", name = "lucid" },
 }
 
 require("lazy").setup(plugins)
