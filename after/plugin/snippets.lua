@@ -141,4 +141,7 @@ ls.add_snippets("all", {
         "   cin >> a[i];",
         "",
     })),
+	s("for", t({
+        "for (int i = 0; i < n; ++i) {",
+    })),
 })

@@ -54,7 +54,7 @@ settings = {
     },
   },
 })
-require('lspconfig').tsserver.setup({})
+-- require('lspconfig').tsserver.setup({})
 -- require('lspconfig').denols.setup({})
 require('lspconfig').ccls.setup({})
 
