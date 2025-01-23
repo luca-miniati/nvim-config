@@ -19,7 +19,15 @@ local plugins = {
     "VonHeikemen/fine-cmdline.nvim",
 
     --LaTeX
-    "lervag/vimtex",
+    {
+        "lervag/vimtex",
+        lazy = false,     -- we don't want to lazy load VimTeX
+        -- tag = "v2.15", -- uncomment to pin to a specific release
+        init = function()
+            -- VimTeX configuration goes here, e.g.
+            vim.g.vimtex_view_method = "zathura"
+        end
+    },
 
     -- lsp stuff
 	"williamboman/mason.nvim",
@@ -50,6 +58,9 @@ local plugins = {
     -- colors
     { "aktersnurra/no-clown-fiesta.nvim", name = "no-clown-fiesta" },
     { "rose-pine/neovim", name = "rose-pine" },
+
+    -- black magic
+    { 'glacambre/firenvim', build = ":call firenvim#install(0)" }
 }
 
 require("lazy").setup(plugins)

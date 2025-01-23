@@ -22,3 +22,5 @@ vim.api.nvim_command("highlight ColorColumn ctermbg=darkgrey guibg=#3a3a3a")
 vim.api.nvim_command("set colorcolumn=100")
 vim.api.nvim_command("set cursorline")
 vim.cmd([[ command! -nargs=0 W w ]])
+
+vim.api.nvim_command("set foldmethod=marker")

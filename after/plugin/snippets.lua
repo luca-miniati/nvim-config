@@ -37,73 +37,6 @@ end, {silent = true})
 vim.keymap.set("n", "<leader>r", "<cmd>source ~/.config/nvim/after/plugin/snippets.lua<CR>");
 
 ls.add_snippets("all", {
-    s("cp", t({
-        "#include <bits/stdc++.h>",
-        "using namespace std;",
-        "using ll = int64_t;",
-        "",
-        "void solve() {",
-        "",
-        "}",
-        "",
-        "int main() {",
-        "    ios_base::sync_with_stdio(false);",
-        "    cin.tie(0);",
-        "    int t; cin >> t;",
-        "    while (t--)",
-        "        solve();",
-        "}"
-    })),
-    s("fta", t({
-        "map<ll, ll> fta(ll n) {",
-        "   map<ll, ll> factors;",
-        "", 
-        "   while (n % 2 == 0) {",
-        "       ++factors[2];",
-        "       n /= 2;",
-        "   }",
-        "",
-        "   for (int i = 3; i <= sqrt(n); i += 2) {",
-        "       while (n % i == 0) {",
-        "           ++factors[i];",
-        "           n /= i;",
-        "       }",
-        "   }",
-        "",
-        "   if (n > 2)",
-        "       ++factors[n];",
-        "",
-        "   return factors;",
-        "}",
-    })),
-    s("nck", t({
-        "ll mod_exp(ll base, ll exp, ll mod) {",
-        "    ll result = 1;",
-        "    while (exp > 0) {",
-        "        if (exp % 2 == 1)",
-        "            result = (result * base) % mod;",
-        "        base = (base * base) % mod;",
-        "        exp /= 2;",
-        "    }",
-        "    return result;",
-        "}",
-        "",
-        "void compute_factorials(vector<int>& f, vector<in>& inv_f, int MAXN, int M) {",
-        "    f[0] = 1;",
-        "    for (int i = 1; i <= MAXN; ++i) {",
-        "        f[i] = (f[i - 1] * i) % M;",
-        "    }",
-        "    inv_f[MAXN] = mod_exp(f[MAXN], M - 2, M);",
-        "    for (int i = MAXN - 1; i >= 0; --i) {",
-        "        inv_f[i] = (inv_f[i + 1] * (i + 1)) % M;",
-        "    }",
-        "}",
-        "",
-        "ll nck(ll n, ll k) {",
-        "    if (k > n) return 0;",
-        "    return (factorial[n] * inv_factorial[k] % M) * inv_factorial[n - k] % M;",
-        "}",
-    })),
     s("segtree", t({
         "void build(vector<int>& T, int n, vector<int>& a) {",
         "   for (int i = a.size() - 1; i > 0; --i)",
@@ -124,24 +57,85 @@ ls.add_snippets("all", {
         "    return res;",
         "}",
     })),
-    s("ri", {t("int "), i(1), t("; cin >> "), rep(1), t({";", ""})}),
     s("vi", t("vector<int>"));
     s("vll", t("vector<ll>"));
     s("vs", t("vector<string>"));
     s("si", t("set<int>"));
     s("sll", t("set<ll>"));
     s("ss", t("set<string>"));
-    s("umi", t("unordered_map<int>"));
-    s("umll", t("unordered_map<ll>"));
-    s("ums", t("unordered_map<string>"));
     s("pi", t("pair<int, int>"));
-	s("a_n", t({
-        "vector<int> a(n);",
-        "for (int i = 0; i < n; ++i)",
+	s("n", t({
+        "int n; cin >> n;",
+    })),
+	s("n, m", t({
+        "int n, m; cin >> n >> m;",
+    })),
+	s("n, k", t({
+        "int n, k; cin >> n >> k;",
+    })),
+	s("an", t({
+        "vi a(n);",
+        "rep (i, n)",
         "   cin >> a[i];",
         "",
     })),
-	s("for", t({
-        "for (int i = 0; i < n; ++i) {",
+	s("rep", t({
+        "rep (i, n) {",
     })),
+	s("list", {
+        t({
+            "\\begin{enumerate}",
+            "    "
+        }),
+        i(1),
+        t({
+            "",
+            "\\end{enumerate}"
+        }),
+    }),
+    s("fr", {
+        t("\\frac{"),
+        i(1),
+        t("}{"),
+        i(2),
+        t("}")
+    }),
+	s("bb", {
+        t("\\mathbb{"),
+        i(1),
+        t("}")
+    }),
+	s("v", {
+        t("\\vb{"),
+        i(1),
+        t("}")
+    }),
+	s("*", {
+        t("\\cdot")
+    }),
+	s("...", {
+        t("\\dots")
+    }),
+	s("eq", {
+        t({
+            "\\begin{align*}",
+            "    "
+        }),
+        i(1),
+        t({
+            "",
+            "\\end{align*}"
+        }),
+    }),
+	s("mat", {
+        t({
+            "\\begin{pmatrix}",
+            "    "
+        }),
+        i(1),
+        t({
+            "",
+            "\\end{pmatrix}"
+        }),
+    }),
 })

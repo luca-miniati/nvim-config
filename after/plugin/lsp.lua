@@ -57,5 +57,6 @@ settings = {
 -- require('lspconfig').tsserver.setup({})
 -- require('lspconfig').denols.setup({})
 require('lspconfig').ccls.setup({})
+-- require'lspconfig'.ocamllsp.setup{}
 
 lsp.setup()
