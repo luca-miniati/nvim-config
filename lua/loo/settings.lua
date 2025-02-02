@@ -24,3 +24,4 @@ vim.api.nvim_command("set cursorline")
 vim.cmd([[ command! -nargs=0 W w ]])
 
 vim.api.nvim_command("set foldmethod=marker")
+vim.api.nvim_set_keymap('n', '<leader>e', ':e .<CR>', { noremap = true, silent = true })
