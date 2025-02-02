@@ -116,6 +116,15 @@ ls.add_snippets("all", {
 	s("...", {
         t("\\dots")
     }),
+	s("eps", {
+        t("\\epsilon")
+    }),
+	s("l", {
+        t("\\left")
+    }),
+	s("r", {
+        t("\\right")
+    }),
 	s("eq", {
         t({
             "\\begin{align*}",

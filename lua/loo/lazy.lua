@@ -59,8 +59,12 @@ local plugins = {
     { "aktersnurra/no-clown-fiesta.nvim", name = "no-clown-fiesta" },
     { "rose-pine/neovim", name = "rose-pine" },
 
-    -- black magic
-    { 'glacambre/firenvim', build = ":call firenvim#install(0)" }
+    -- file management
+    "lambdalisue/fern.vim",
+    "lambdalisue/vim-fern-hijack",
+    "lambdalisue/vim-nerdfont",
+    "lambdalisue/vim-glyph-palette",
+    "lambdalisue/vim-fern-renderer-nerdfont",
 }
 
 require("lazy").setup(plugins)

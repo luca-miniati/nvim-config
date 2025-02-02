@@ -7,8 +7,8 @@
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
   "data-viewer.nvim": { "branch": "main", "commit": "40ddf37bb7ab6c04ff9e820812d1539afe691668" },
+  "fern.vim": { "branch": "main", "commit": "cb5be74e4a343c8187be91b6be4475b2d73755a2" },
   "fine-cmdline.nvim": { "branch": "main", "commit": "aec9efebf6f4606a5204d49ffa3ce2eeb7e08a3e" },
-  "firenvim": { "branch": "master", "commit": "64f9389b88c8b0c7667d45c171a5f25c42d852fb" },
   "friendly-snippets": { "branch": "main", "commit": "e11b09bf10706bb74e16e4c3d11b2274d62e687f" },
   "harpoon": { "branch": "master", "commit": "867e212ac153e793f95b316d1731f3ca1894625e" },
   "lazy.nvim": { "branch": "main", "commit": "fafe1f7c640aed75e70a10e6649612cd96f39149" },
@@ -24,5 +24,9 @@
   "rose-pine": { "branch": "main", "commit": "92762f4fa2144c05db760ea254f4c399a56a7ef5" },
   "telescope.nvim": { "branch": "master", "commit": "3a743491e5c6be0ed0aa8c31c6905df8f66179ba" },
   "vim-be-good": { "branch": "master", "commit": "c290810728a4f75e334b07dc0f3a4cdea908d351" },
+  "vim-fern-hijack": { "branch": "master", "commit": "f65524899231b15528066744e714fb344abf0892" },
+  "vim-fern-renderer-nerdfont": { "branch": "master", "commit": "325629c68eb543229715b68920fbcb92b206beb6" },
+  "vim-glyph-palette": { "branch": "master", "commit": "1ee16c232c5538f34bb47c3dd0f6b369fdd7c555" },
+  "vim-nerdfont": { "branch": "master", "commit": "339e5e0f725ad5552c0910653a8b1fbb59eed2b8" },
   "vimtex": { "branch": "master", "commit": "f9b19d09ee6f0ba70dad0b5c2e710dd700681000" }
 }
