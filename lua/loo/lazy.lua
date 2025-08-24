@@ -56,8 +56,9 @@ local plugins = {
     "numToStr/Comment.nvim",
 
     -- colors
-    { "aktersnurra/no-clown-fiesta.nvim", name = "no-clown-fiesta" },
+    -- { "aktersnurra/no-clown-fiesta.nvim", name = "no-clown-fiesta" },
     { "rose-pine/neovim", name = "rose-pine" },
+    -- { "L-Colombo/atlantic-dark.nvim" },
 }
 
 require("lazy").setup(plugins)

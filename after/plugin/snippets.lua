@@ -75,12 +75,11 @@ ls.add_snippets("all", {
     })),
 	s("an", t({
         "vi a(n);",
-        "rep (i, n)",
-        "   cin >> a[i];",
+        "rep(i, n) cin >> a[i];",
         "",
     })),
 	s("rep", t({
-        "rep (i, n) {",
+        "rep(i, n) {",
     })),
 	s("list", {
         t({
@@ -91,6 +90,28 @@ ls.add_snippets("all", {
         t({
             "",
             "\\end{enumerate}"
+        }),
+    }),
+	s("thm", {
+        t({
+            "\\begin{thm}[]",
+            "    "
+        }),
+        i(1),
+        t({
+            "",
+            "\\end{thm}"
+        }),
+    }),
+	s("def", {
+        t({
+            "\\begin{defn}[]",
+            "    "
+        }),
+        i(1),
+        t({
+            "",
+            "\\end{defn}"
         }),
     }),
     s("fr", {
